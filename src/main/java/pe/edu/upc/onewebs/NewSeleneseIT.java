@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -24,14 +23,13 @@ public class NewSeleneseIT {
 	
 	@BeforeClass
 	public void inicializarDriver() throws MalformedURLException{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\delam\\OneDrive - Universidad Peruana de Ciencias\\Project Java\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Miguel Garcia\\Desktop\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions(); //.setExperimentalOption("debuggerAddress", "localhost:9014");
 		//options.addArguments("--disable-notifications");
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
 	}
-
 	
 	public void testCrearUsuario() {
 		//Aquí obtenemos la url que queremos probar
