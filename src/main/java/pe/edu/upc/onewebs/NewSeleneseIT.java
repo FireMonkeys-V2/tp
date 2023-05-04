@@ -24,7 +24,7 @@ public class NewSeleneseIT {
 	
 	@BeforeClass
 	public void inicializarDriver() throws MalformedURLException{
-		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumWD\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\delam\\OneDrive - Universidad Peruana de Ciencias\\Project Java\\chromedriver_win32\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions(); //.setExperimentalOption("debuggerAddress", "localhost:9014");
 		//options.addArguments("--disable-notifications");
