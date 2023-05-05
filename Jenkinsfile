@@ -1,26 +1,26 @@
 pipeline {
  agent any
  tools {
- maven 'MAVEN_4_0_0'
+ maven 'Maven 3.9.1'
  }
  stages {
  stage ('Compile Stage') {
  steps {
- withMaven(maven : 'MAVEN_4_0_0') {
+ withMaven(maven : 'Maven 3.9.1') {
  bat 'mvn clean compile'
  }
  }
  }
  stage ('Testing Stage') {
  steps {
- withMaven(maven : 'MAVEN_4_0_0') {
+ withMaven(maven : 'Maven 3.9.1') {
  bat 'mvn test'
  }
  }
  }
  stage ('package Stage') {
  steps {
- withMaven(maven : 'MAVEN_4_0_0') {
+ withMaven(maven : 'Maven 3.9.1') {
  bat 'mvn package'
  }
  }
