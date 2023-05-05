@@ -26,10 +26,7 @@ public class AgregarDetenido {
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
     }
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+
     @Test
     public void agregardetenido() {
         driver.get("http://localhost:8081/");
@@ -52,8 +49,8 @@ public class AgregarDetenido {
         driver.findElement(By.id("dni")).click();
         driver.findElement(By.id("dni")).sendKeys("12345678");
         driver.findElement(By.id("apellidos")).click();
-        driver.findElement(By.id("apellidos")).sendKeys("Perez Sanchez");
-        driver.findElement(By.id("nombres")).sendKeys("Juan");
+        driver.findElement(By.id("apellidos")).sendKeys("Ramirez");
+        driver.findElement(By.id("nombres")).sendKeys("Leo");
         driver.findElement(By.id("fechaNacimiento")).sendKeys("0002-08-01");
         driver.findElement(By.id("fechaNacimiento")).sendKeys("0020-08-01");
         driver.findElement(By.id("fechaNacimiento")).sendKeys("0200-08-01");

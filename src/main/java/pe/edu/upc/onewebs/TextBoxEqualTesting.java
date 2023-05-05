@@ -42,7 +42,7 @@ public class TextBoxEqualTesting {
         boton2 = driver.findElement(By.id("submit"));
         boton2.click();
 
-        //Assertion = driver.findElement(By.id("name"));
-        //Assert.assertEquals("Name:Juan Aranda", Assertion.getText());
+        Assertion = driver.findElement(By.id("name"));
+        Assert.assertEquals("Name:Juan Aranda", Assertion.getText());
     }
 }
